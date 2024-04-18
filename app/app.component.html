@@ -1,0 +1,41 @@
+<h1 class="titleStyle"> {{title}} </h1>
+
+<button (click)="incrementar()">Sumar</button>
+
+<p> {{suma}} </p>
+
+@if (suma == 1) {
+  @for (item of miArray; track $index) {
+    <p *ngIf="suma == 1" > {{nombre}} </p>
+  }
+}
+
+<ng-container *ngFor="let item of miArray">
+  <p *ngIf="suma == 1" > {{nombre}} </p>
+</ng-container>
+
+<input type="text" [(ngModel)]="nombre">
+
+<app-primer-componente>
+
+<div>
+  <label for="">Edad uno</label>
+  <input type="number" [(ngModel)]="edadUno" required="number">
+
+  <label for="">Edad dos</label>
+  <input type="number" [(ngModel)]="edadDos" required="number">
+
+  <button (click)="calcular()">Calcular</button>
+
+</div>
+
+<div>
+  <label for="">Promedio</label>
+  <input type="number" [(ngModel)]="promedio" readonly>
+
+  <label for="">Resultado</label>
+  <input type="number" [(ngModel)]="resultado">
+
+</div>
+
+</app-primer-componente>

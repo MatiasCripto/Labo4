@@ -1,0 +1,46 @@
+<h1>Ingrese dos edades</h1>
+ <div>
+
+   <label for="">Edad uno</label>
+   <input type="number" [(ngModel)]="edadUno" required="number">
+ 
+   <label for="">Edad dos</label>
+   <input type="number" [(ngModel)]="edadDos" required="number">
+ 
+   <div>
+    <button (click)="calcular()">Calcular</button>
+    <button (click)="limpiar()">Borrar Info</button> 
+   </div>
+
+ </div>
+ <div>
+
+   <label for="">Promedio</label>
+   <input type="number" [(ngModel)]="promedio" readonly>
+ 
+   <label for="">Resultado</label>
+   <input type="number" [(ngModel)]="suma" readonly>
+
+ </div>
+
+ <!-- <div>
+   <label>Edad Uno:</label>
+   <input type="number" [(ngModel)]="edadUno">
+ </div>
+ <div>
+   <label>Edad Dos:</label>
+   <input type="number" [(ngModel)]="edadDos">
+ </div>
+ <div>
+   <button (click)="calcular()">Calcular</button>
+   <button (click)="limpiar()">Limpiar Cuadros de Textos</button> 
+ </div>
+ <div *ngIf="promedio !== null">
+   <label>Promedio:</label>
+   <input type="number" [value]="promedio" disabled>
+ </div>
+ <div *ngIf="suma !== null">
+   <label>Suma:</label>
+   <input type="number" [value]="suma" disabled>
+ </div> -->
+ 
